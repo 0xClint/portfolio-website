@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./Header.scss";
 import { gsap } from "gsap";
 import { Link } from "react-scroll";
+import Resume from "../assets/Omkar_Resume Web3.pdf";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -34,7 +35,13 @@ const Header = () => {
       {/* <div className="headerResume"></div> */}
       <div className="headerRight">
         <div className="navItems" id="navItems">
-          <li className="navItem">Resume</li>
+          <a
+            href={Resume}
+            target="_blank"
+            style={{ color: "#ffffff", textDecoration: "none" }}
+          >
+            <li className="navItem">Resume</li>
+          </a>
           <li className="navItem">Home</li>
           <Link to="intro" spy={true} smooth={true} offset={50} duration={500}>
             <li className="navItem">About</li>
