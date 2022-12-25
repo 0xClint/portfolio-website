@@ -1,0 +1,45 @@
+@import "../mixin.scss";
+
+.header {
+  @include Flex();
+  padding: 0 0 0 6%;
+  height: 140px;
+  justify-content: space-between;
+  background-color: #000000;
+  color: white;
+  overflow-x: hidden;
+
+  .headerLeft {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .headerRight {
+    @include Flex();
+    overflow: hidden;
+    height: 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    .navItems {
+      width: 500px;
+      @include Flex();
+      gap: 5rem;
+      list-style: none;
+      z-index: 1;
+      transform: translateX(420px);
+      transition: ease-out 0.5s;
+      .navItem {
+        cursor: pointer;
+      }
+    }
+    .hamburgerMenu {
+      @include Flex();
+      justify-content: flex-start;
+      background-color: black;
+      height: 100px;
+      width: 150px;
+      margin-left: 5rem;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+}

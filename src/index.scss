@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "CircularStd";
+  src: local("CircularStd"),
+    url("./fonts/CircularStd-Light.otf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "CircularStd";
+  src: local("CircularStd"),
+    url("./fonts/CircularStd-Book.otf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "CircularStd";
+  src: local("CircularStd"),
+    url("./fonts/CircularStd-Medium.otf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "CircularStd";
+  src: local("CircularStd"),
+    url("./fonts/CircularStd-Bold.otf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "CircularStd";
+  src: local("CircularStd"),
+    url("./fonts/CircularStd-Black.otf") format("truetype");
+  font-weight: 800;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "CircularStd";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+
+  ::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d;
+  }
+
+  .btn-container {
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid white;
+    padding: 3px;
+
+    .btn {
+      text-decoration: none;
+      /* font-size: 18px; */
+      padding: 3px;
+      //   font-family: "circular-medium";
+      font-weight: 600;
+      color: white;
+      cursor: none;
+    }
+
+    .line {
+      height: 2px;
+      width: 50px;
+      background-color: white;
+      margin: 0px 6px;
+      transition: 0.3s;
+    }
+
+    &:hover .line {
+      width: 0px;
+      margin: 0px;
+      transition: 0.2s;
+    }
+    .ball {
+      height: 10px;
+      width: 10px;
+      background-color: #002dce;
+      border-radius: 50%;
+    }
+
+    &.btn {
+      text-decoration: underline;
+      font-family: "circular-medium";
+    }
+  }
+}

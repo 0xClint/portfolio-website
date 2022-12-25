@@ -1,0 +1,88 @@
+@import "../mixin.scss";
+
+.contactSection {
+  margin-top: 4rem;
+  padding: 3rem 12rem;
+  background-color: black;
+  color: white;
+  .contactHeading {
+    @include Flex();
+    justify-content: flex-start;
+    gap: 2rem;
+    h2 {
+      margin: 0;
+      font-size: 4rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      background: linear-gradient(
+        93.61deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.6) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    .triangleContainer {
+      display: flex;
+      //   width: 1000px;
+      height: 80px;
+      flex-direction: column;
+
+      .contactTriangleFilled {
+        position: relative;
+        top: 20px;
+        z-index: 5;
+      }
+      .contactTriangleBordered {
+        position: relative;
+        // transform: translateX("200px");
+        top: 0px;
+        // transform: translateY("10px");
+        z-index: 3;
+      }
+    }
+  }
+  .contactContent {
+    font-size: 2.3rem;
+    font-weight: 500;
+    line-height: 170%;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .tagline {
+    @include Flex();
+    // display: inline-block;
+    margin: 10rem 0 3rem 0;
+    h2 {
+      margin: 0;
+      font-size: 3.5rem;
+      background: linear-gradient(
+        90deg,
+        #12c2e9 0%,
+        #c471ed 43.63%,
+        #f64f59 85.48%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    span {
+      font-size: 3rem;
+    }
+  }
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .socialContainer {
+    @include Flex();
+    height: 50px;
+    gap: 1.5rem;
+  }
+}

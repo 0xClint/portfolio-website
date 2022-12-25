@@ -1,0 +1,95 @@
+@import "../mixin.scss";
+
+.hero {
+  background-color: black;
+  color: white;
+  display: flex;
+  .heroLeft {
+    width: 33%;
+    margin-top: 300px;
+    // @include Flex();
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    #square {
+      background-color: #002dce;
+      height: 150px;
+      width: 150px;
+      transform-origin: 50% 50%;
+      // overflow: hidden;
+    }
+    #triangle {
+      width: 0;
+      height: 0;
+      border-left: 75px solid transparent;
+      border-right: 75px solid transparent;
+      border-top: 130px solid white;
+      margin-top: 3rem;
+    }
+  }
+
+  /* ********************** mid-Hero Section******** */
+  .heroMid {
+    width: 40%;
+
+    #text {
+      // display: inline;
+      font-size: 7rem;
+      margin-top: 1rem;
+      line-height: 130px;
+      padding-left: 4rem;
+      background: linear-gradient(
+        154.97deg,
+        #ffffff 4.2%,
+        rgba(255, 255, 255, 0.5) 89.3%,
+        rgba(255, 255, 255, 0) 102.86%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+
+      #span1 {
+        -webkit-text-fill-color: #e4ff5e;
+      }
+      #span2 {
+        -webkit-text-fill-color: #80ed5a;
+      }
+    }
+
+    span:nth-child(2) {
+      color: #5eff71;
+    }
+  }
+  .heroRight {
+    width: 20%;
+
+    #square {
+      position: relative;
+      transform-origin: 50% 50%;
+      top: 50px;
+      left: 50px;
+      background-color: #7804d3;
+      height: 150px;
+      width: 150px;
+    }
+
+    #triangle {
+      width: 0;
+      height: 0;
+      //   border-left: 75px solid transparent;
+      //   border-right: 75px solid transparent;
+      //   border-top: 150px solid #555;
+      //   margin-top: 3rem;
+    }
+
+    #heroBtn {
+      position: relative;
+      top: 380px;
+      // left: 250px;
+      transform: rotate(90deg);
+    }
+  }
+}
