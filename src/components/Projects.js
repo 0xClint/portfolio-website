@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/all";
 import { TriangleBordered, TriangleFilled } from "../assets";
 import "./Projects.scss";
 import { gsap } from "gsap";
+import { projects } from "../assets/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,129 +68,48 @@ const Projects = () => {
       </div>
 
       <div className="projectContainer">
-        <div className="projectCardContainer">
-          <div className="outerCard">
-            <div className="innerCard">
-              <div className="projectCard">
-                <div
-                  className="projectLeft"
-                  style={{ backgroundColor: "#3272FF" }}
-                >
-                  <a
-                    href="https://grocery-list-teal.vercel.app/"
-                    target="_blank"
-                  >
-                    <img src={require("../assets/projects/1.png")} alt="" />
-                  </a>
+        {projects
+          ? projects.map((item, index) => {
+              return (
+                <div className="projectCardContainer" key={index + 1}>
+                  <div className="outerCard">
+                    <div className="innerCard">
+                      <div className="projectCard">
+                        <div
+                          className="projectLeft"
+                          style={{ backgroundColor: `${item.color}` }}
+                        >
+                          <a href={item.website} target="_blank">
+                            <img src={item.img} alt="" />
+                            {/* <img src={require(item.img)} alt="" /> */}
+                          </a>
+                        </div>
+                        <div className="projectRight">
+                          <h3>{item.title}</h3>
+                          <div className="linkContainer">
+                            <a href={item.website} target="_blank">
+                              Visit the website
+                            </a>
+                            {item.github ? (
+                              <a href={item.github} target="_blank">
+                                Github
+                              </a>
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                          <p>{item.info}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="count">
+                    {index < 10 ? `0${index + 1}` : index + 1}
+                  </div>
                 </div>
-                <div className="projectRight">
-                  <h3>Grocery List</h3>
-                  <a
-                    href="https://grocery-list-teal.vercel.app/"
-                    target="_blank"
-                  >
-                    Visit the website
-                  </a>
-                  <p>
-                    Project details, about the projects and its features, all
-                    the details related to the project.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="count">01</div>
-        </div>
-
-        <div className="projectCardContainer">
-          <div className="outerCard">
-            <div className="innerCard">
-              <div className="projectCard">
-                <div
-                  className="projectLeft"
-                  style={{ backgroundColor: "#2C2C2C" }}
-                >
-                  <a
-                    href="https://crypto-coins-search-website.vercel.app/"
-                    target="_blank"
-                  >
-                    <img src={require("../assets/projects/2.png")} alt="" />
-                  </a>
-                </div>
-                <div className="projectRight">
-                  <h3>Crypto Coins</h3>
-                  <a
-                    href="https://crypto-coins-search-website.vercel.app/"
-                    target="_blank"
-                  >
-                    Visit the website
-                  </a>
-                  <p>
-                    Project details, about the projects and its features, all
-                    the details related to the project.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="count">02</div>
-        </div>
-
-        <div className="projectCardContainer">
-          <div className="outerCard">
-            <div className="innerCard">
-              <div className="projectCard">
-                <div
-                  className="projectLeft"
-                  style={{ backgroundColor: "#EDEDED" }}
-                >
-                  <a href="https://www.iitr.ac.in/emee/" target="_blank">
-                    <img src={require("../assets/projects/3.png")} alt="" />
-                  </a>
-                </div>
-                <div className="projectRight">
-                  <h3>EMEE Conference </h3>
-                  <a href="https://www.iitr.ac.in/emee/" target="_blank">
-                    Visit the website
-                  </a>
-                  <p>
-                    Project details, about the projects and its features, all
-                    the details related to the project.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="count">03</div>
-        </div>
-
-        <div className="projectCardContainer">
-          <div className="outerCard">
-            <div className="innerCard">
-              <div className="projectCard">
-                <div
-                  className="projectLeft"
-                  style={{ backgroundColor: "#6874FE" }}
-                >
-                  <a href="https://filechain.vercel.app/" target="_blank">
-                    <img src={require("../assets/projects/4.png")} alt="" />
-                  </a>
-                </div>
-                <div className="projectRight">
-                  <h3>Filechain </h3>
-                  <a href="https://filechain.vercel.app/" target="_blank">
-                    Visit the website
-                  </a>
-                  <p>
-                    Project details, about the projects and its features, all
-                    the details related to the project.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="count">04</div>
-        </div>
+              );
+            })
+          : ""}
       </div>
     </div>
   );

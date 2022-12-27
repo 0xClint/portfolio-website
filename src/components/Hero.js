@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import SplitType from "split-type";
 import "./Hero.scss";
 
 const Hero = () => {
   useEffect(() => {
-    // const text = new SplitType("#text", { types: "words, chars" });
-    // gsap.from(text.chars, {
     gsap.from("#text", {
       opacity: 0,
       y: 150,

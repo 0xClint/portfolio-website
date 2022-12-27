@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./Header.scss";
 import { gsap } from "gsap";
 import { Link } from "react-scroll";
+import { mouseOut, mouseOver } from "../utils/mouseHover";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);

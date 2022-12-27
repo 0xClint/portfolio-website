@@ -51,6 +51,27 @@ body {
     background: #6d6d6d;
   }
 
+  #cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    font-size: 12px;
+    // padding-top: 6px;
+    text-align: center;
+    // transition: ease 50ms;
+    z-index: 1000;
+  }
+  #cursor.hoverEffect {
+    transform: scale(3) translate(-4.5px, -4.5px);
+    transition: transform 0.3s;
+  }
+
   .btn-container {
     width: 170px;
     display: flex;

@@ -117,11 +117,17 @@
                 font-weight: 800;
                 font-size: 3.5rem;
               }
-              a {
-                color: #000;
-                font-weight: 500;
-                font-size: 1.3rem;
-                margin: 1rem 0 2rem 0;
+              .linkContainer {
+                @include Flex();
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 1rem;
+                a {
+                  color: #000;
+                  font-weight: 500;
+                  font-size: 1.3rem;
+                  margin: 1rem 0 2rem 0;
+                }
               }
               p {
                 font-size: 1.3rem;
