@@ -140,4 +140,34 @@
       }
     }
   }
+
+  @media (max-width: 770px) {
+    padding: 0;
+    .projectContainer {
+      padding: 0;
+      .projectCardContainer{
+
+        .count{
+          // display: none;
+        }
+        .outerCard{
+          .innerCard{
+            .projectCard{
+              flex-direction: column;
+
+              .projectLeft{
+
+              }
+              .projectRight{
+                h3{
+                  margin: 0;
+                  font-size: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

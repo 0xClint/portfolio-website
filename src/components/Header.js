@@ -42,9 +42,9 @@ const Header = () => {
           >
             <li className="navItem">Resume</li>
           </a>
-          <li className="navItem">Home</li>
-          <Link to="intro" spy={true} smooth={true} offset={50} duration={500}>
-            <li className="navItem">About</li>
+          <li className="navItem" id="homeItem">Home</li>
+          <Link to="intro" spy={true} smooth={true} offset={50} duration={500} id="aboutItem">
+            <li className="navItem" >About</li>
           </Link>
           <Link
             to="project"
@@ -52,6 +52,7 @@ const Header = () => {
             smooth={true}
             offset={50}
             duration={500}
+            id="workItem"
           >
             <li className="navItem">Work</li>
           </Link>

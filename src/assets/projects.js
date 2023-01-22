@@ -2,8 +2,17 @@ import img1 from "./projects/1.png";
 import img2 from "./projects/2.png";
 import img3 from "./projects/3.png";
 import img4 from "./projects/4.png";
+import img5 from "./projects/5.png";
 
 export const projects = [
+  {
+    website: "#",
+    github: "https://github.com/Omkar0803/CrossChat",
+    title: "Cross Chat",
+    info: "Project details, about the projects and its features, all the details related to the project.",
+    img: img5,
+    color: "#A57CFF",
+  },
   {
     website: "https://grocery-list-teal.vercel.app/",
     github: "https://github.com/Omkar0803/groceryList",
