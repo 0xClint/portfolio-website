@@ -100,6 +100,16 @@ const Projects = () => {
                           </div>
                           <p>{item.info}</p>
                         </div>
+                        {item.winner && (
+                          <div className="trophy">
+                            <img
+                              src={require("../assets/trophyIcon.png")}
+                            ></img>
+                            <span class="tooltip-text" id="left">
+                              {item.prize}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

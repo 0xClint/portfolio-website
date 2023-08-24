@@ -36,15 +36,24 @@ const Header = () => {
       <div className="headerRight">
         <div className="navItems" id="navItems">
           <a
-            href="https://drive.google.com/file/d/1UkHUbX3cfjgXFPTvUyJna5BN990DK4kW/view?usp=share_link"
+            href="https://drive.google.com/file/d/1I56snm1gwtLchnpvFiCnpfKLeQ1dcpDU/view?usp=sharing"
             target="_blank"
             style={{ color: "#ffffff", textDecoration: "none" }}
           >
             <li className="navItem">Resume</li>
           </a>
-          <li className="navItem" id="homeItem">Home</li>
-          <Link to="intro" spy={true} smooth={true} offset={50} duration={500} id="aboutItem">
-            <li className="navItem" >About</li>
+          <li className="navItem" id="homeItem">
+            Home
+          </li>
+          <Link
+            to="intro"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            id="aboutItem"
+          >
+            <li className="navItem">About</li>
           </Link>
           <Link
             to="project"
