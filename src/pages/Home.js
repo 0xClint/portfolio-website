@@ -18,17 +18,17 @@ const Home = () => {
         <Projects />
       </div>
       <iframe
-        src="https://supportly-payment-mediater.onrender.com/chat.html?userId=sptly-94033f21c2de4dafz&projectId=cb2d5bcb-4034-4a1a-9ee4-1726ff8bbf3c&dataUrl=https%3A%2F%2Fgateway.pinata.cloud%2Fipfs%2Fbafkreiecondma6bori6idixh22cnnbq6y4hjt3xxz7fues3fqdpfhkwdo4"
-        width="300"
-        height="400"
-        style={{
+  src="https://querymint.onrender.com/chat.html?userId=querymint-94033f21c2de4dafz&serviceId=98d2998b-085f-4367-a8b3-a38dcff39f57&dataUrl=https%3A%2F%2Fgateway.pinata.cloud%2Fipfs%2Fbafkreigch6fgxzc3mlzskexs7q65cjncx5q7bs4yjwvniva5lkm3htx364"
+  width="300"
+  height="400"
+  style={{
           position: "fixed",
           bottom: "20px",
           right: "20px",
           border: "none",
           zIndex: 9999,
         }}
-      ></iframe>
+></iframe>
       <Contact />
       {/* ***************************************************************************** */}
 
